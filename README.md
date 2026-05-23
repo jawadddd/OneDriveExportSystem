@@ -73,18 +73,12 @@ The backend expects a local `.env` file in `backend/` with these variables:
 - `AWS_ACCESS_KEY_ID` — AWS credentials access key
 - `AWS_SECRET_ACCESS_KEY` — AWS credentials secret key
 - `AWS_BUCKET_NAME` — S3 bucket name for export uploads
-- `TENANT_ID` — Azure tenant ID
-- `CLIENT_ID` — Azure AD app client ID
-- `CLIENT_SECRET` — Azure AD app client secret
 
 ### Frontend
 
 The frontend expects a local `.env.local` file with these variables:
 
 - `NEXT_PUBLIC_BACKEND_URL` — backend URL for GraphQL requests, e.g. `http://localhost:5000`
-- `TENANT_ID` — Azure tenant ID
-- `CLIENT_ID` — Azure AD app client ID
-- `CLIENT_SECRET` — Azure AD app client secret
 
 > Note: Azure auth is configured for Microsoft identity and uses `openid profile email User.Read Files.Read offline_access` scopes.
 
@@ -151,6 +145,3 @@ frontend/
 - The frontend uses `next-auth` for Azure AD login and refresh token handling.
 - Admin interactions are authenticated using JWT headers from local storage.
 - MongoDB and Redis are required for job processing and state persistence.
-
-If you need, add a `README` file in `backend/` and `frontend/` later for service-specific developer docs.
-
